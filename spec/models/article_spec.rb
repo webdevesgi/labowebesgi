@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Article do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "should create a new instance given a valid attribute" do
+    FactoryGirl.create(:article).user.inspect
+  end
+
 end

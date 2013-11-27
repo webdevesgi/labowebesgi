@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :article do
-    title "MyString"
-    content "MyString"
-    user_id "MyString"
+    title { Faker::Lorem.sentence(10) }
+    content { Faker::Lorem.paragraph(3) }
+    user { FactoryGirl.build(:user) }
   end
 end
