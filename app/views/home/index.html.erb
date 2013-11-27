@@ -1,4 +1,5 @@
 <h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+<% @articles.each do |article| %>
+  <h2><%= article.title %></h2>
+  <div class="article-content"><%= article.content %></div>
 <% end %>

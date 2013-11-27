@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Meetformeal::Application.config.secret_key_base = 'c28d28025ad0928ce831bb2285ca2fdd734fbe2c2804c65bcacb7b018ccc8e136929f4275fcb196bea9df237e274ecb318605cccdcb6f154cdf3690e7d00d068'
+Labowebesgi::Application.config.secret_key_base = 'c28d28025ad0928ce831bb2285ca2fdd734fbe2c2804c65bcacb7b018ccc8e136929f4275fcb196bea9df237e274ecb318605cccdcb6f154cdf3690e7d00d068'
