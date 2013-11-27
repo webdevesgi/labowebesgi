@@ -12,9 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-// Note: Foundation 5 won't work with turbolinks
-//= require foundation
+//= require turbolinks
+//= require bootstrap
 //= require_tree .
-$(function() {
-  $(document).foundation();
-});
