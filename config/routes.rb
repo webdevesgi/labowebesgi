@@ -1,6 +1,4 @@
 Labowebesgi::Application.routes.draw do
-  resources :articles
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root "home#index"
   devise_for  :users,
@@ -11,4 +9,5 @@ Labowebesgi::Application.routes.draw do
                               sign_out: 'logout'
                             }
   resources :users
+  resources :articles, only: [:index, :show]
 end
