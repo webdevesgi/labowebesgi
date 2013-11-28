@@ -5,6 +5,12 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  # GET /events/past
+  # GET /events/past.json
+  def past
+    @events = Event.past
+  end
+
   # GET /events/1
   # GET /events/1.json
   def show
