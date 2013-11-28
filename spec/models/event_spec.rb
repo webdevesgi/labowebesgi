@@ -1,9 +1,7 @@
 require 'spec_helper'
 
-describe Article do
-
+describe Event do
   it "should create a new instance given a valid attribute" do
-    FactoryGirl.create(:article)
+    FactoryGirl.create(:event)
   end
-
 end
