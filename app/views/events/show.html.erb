@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= t '.label_title' %> :</strong>
   <%= @event.title %>
 </p>
 
 <p>
-  <strong>Starts at:</strong>
-  <%= @event.starts_at %>
+  <strong><%= t '.label_starts_at' %> :</strong>
+  <%= l @event.starts_at, format: :long %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to events_path do %>
+  <button class="btn btn-primary"><%= t(:back) %></button>
+<% end %>

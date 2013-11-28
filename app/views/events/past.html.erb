@@ -1,7 +1,3 @@
-<h1>Past events</h1>
+<h1><%= t '.title' %></h1>
 
-<% if @events.any? %>
-  <%= render 'event_list' %>
-<% else %>
-  <p>Il n'y a pas d'événements à afficher.</p>
-<% end %>
+<%= render 'event_list' %>

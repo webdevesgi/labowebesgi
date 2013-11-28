@@ -1,0 +1,15 @@
+fr:
+  events:
+    index:
+      title: "Liste des événements"
+    past:
+      title: "Événements précédents"
+    event_list:
+      table_title: "Titre"
+      table_starts_at: "Lancement"
+      table_actions: "Actions"
+      table_show: "Afficher"
+      no_events: "Il n'y a pas d'événements à afficher."
+    show:
+      label_title: "Titre"
+      label_starts_at: "Lancement"
