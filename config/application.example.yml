@@ -13,4 +13,7 @@ GMAIL_PASSWORD: Your_Password
 ADMIN_NAME: First User
 ADMIN_EMAIL: user@example.com
 ADMIN_PASSWORD: changeme
-ROLES: [admin, user, VIP]
+ROLES: [admin, user]
+SECRET_KEY_BASE: abc123
+COOKIE_STORE_KEY: "_session"
+DEVISE_SECRET: abc123
