@@ -1,0 +1,10 @@
+fr:
+  hello: "Salut tout le monde"
+  app_name: "Labo Web ESGI"
+  signup: "S'inscrire"
+  login: "Se connecter"
+  logout: "Déconnexion"
+  edit_account_link: "Salut %{name} !"
+  admin: "Administration"
+  news: "News"
+  toggle_navigation: "Basculer la navigation"

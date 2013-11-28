@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= t '.label_title' %> :</strong>
   <%= @article.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong><%= t '.label_content' %> :</strong>
   <%= @article.content %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @article.user_id %>
+  <strong><%= t '.label_user' %> :</strong>
+  <%= link_to @article.user.name, user_path(@article.user) %>
 </p>
 
-<%= link_to 'Back', articles_path %>
+<%= link_to t(:back), articles_path %>

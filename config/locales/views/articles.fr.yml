@@ -1,0 +1,13 @@
+fr:
+  articles:
+    index:
+      title: "Liste des news"
+      table_title: "Titre"
+      table_content: "Contenu"
+      table_user: "Auteur"
+      table_actions: "Actions"
+      table_show: "Afficher"
+    show:
+      label_title: "Titre"
+      label_content: "Contenu"
+      label_user: "Auteur"

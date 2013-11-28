@@ -8,6 +8,6 @@ Labowebesgi::Application.routes.draw do
                               sign_up:  'signup',
                               sign_out: 'logout'
                             }
-  resources :users
+  resources :users, only: [:show]
   resources :articles, only: [:index, :show]
 end

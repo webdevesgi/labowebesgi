@@ -1,0 +1,6 @@
+fr:
+  users:
+    show:
+      title: "Utilisateur"
+      name: "Nom"
+      email: "Adresse e-mail"

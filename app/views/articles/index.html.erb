@@ -1,22 +1,25 @@
-<h1>Listing articles</h1>
+<h1><%= t '.title' %></h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>User</th>
-      <th></th>
+      <th><%= t '.table_title' %></th>
+      <th><%= t '.table_content' %></th>
+      <th><%= t '.table_user' %></th>
+      <th><%= t '.table_actions' %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
         <td><%= article.content %></td>
-        <td><%= article.user_id %></td>
-        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to article.user.name, user_path(article.user) %></td>
+        <td>
+          <%= link_to(article) do %>
+            <button class="btn btn-primary"><%= t('.table_show') %></button>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
