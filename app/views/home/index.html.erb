@@ -1,5 +1,9 @@
-<h2><%= t(:news) %></h2>
-<% @articles.each do |article| %>
-  <h2><%=link_to article.title, article %></h2>
-  <div class="article-content"><%= article.content %></div>
+<h2><%= t '.title' %></h2>
+<% if @articles.any? %>
+  <% @articles.each do |article| %>
+    <h2><%=link_to article.title, article %></h2>
+    <div class="article-content"><%= article.content %></div>
+  <% end %>
+<% else %>
+  <p><%= t '.no_articles' %></p>
 <% end %>

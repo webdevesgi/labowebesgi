@@ -1,26 +1,34 @@
 <h1><%= t '.title' %></h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th><%= t '.table_title' %></th>
-      <th><%= t '.table_content' %></th>
-      <th><%= t '.table_user' %></th>
-      <th><%= t '.table_actions' %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @articles.each do |article| %>
+<% if @articles.any? %>
+
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= article.title %></td>
-        <td><%= article.content %></td>
-        <td><%= link_to article.user.name, user_path(article.user) %></td>
-        <td>
-          <%= link_to(article) do %>
-            <button class="btn btn-info"><%= t('.table_show') %></button>
-          <% end %>
-        </td>
+        <th><%= t '.table_title' %></th>
+        <th><%= t '.table_content' %></th>
+        <th><%= t '.table_user' %></th>
+        <th><%= t '.table_actions' %></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.content %></td>
+          <td><%= link_to article.user.name, user_path(article.user) %></td>
+          <td>
+            <%= link_to(article) do %>
+              <button class="btn btn-info"><%= t('.table_show') %></button>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% else %>
+
+  <p><%= t '.no_articles' %></p>
+
+<% end %>

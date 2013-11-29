@@ -7,6 +7,7 @@ fr:
       table_user: "Auteur"
       table_actions: "Actions"
       table_show: "Afficher"
+      no_articles: "Il n'y a pas de news à afficher."
     show:
       label_title: "Titre"
       label_content: "Contenu"
