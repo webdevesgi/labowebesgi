@@ -1,0 +1,13 @@
+<% unless @event.nil? %>
+  <p>
+    <strong><%= t '.label_title' %> :</strong>
+    <%= @event.title %>
+  </p>
+
+  <p>
+    <strong><%= t '.label_starts_at' %> :</strong>
+    <%= l @event.starts_at, format: :long %>
+  </p>
+<% else %>
+  <p><%= t '.no_event' %></p>
+<% end %>

@@ -4,13 +4,16 @@ fr:
       title: "Liste des événements"
     past:
       title: "Événements précédents"
-      all_events: "Voir tous les événements"
     event_list:
       table_title: "Titre"
       table_starts_at: "Lancement"
       table_actions: "Actions"
       table_show: "Afficher"
-      no_events: "Il n'y a pas d'événements à afficher."
+      no_events: "Il n'y a pas d'événement à afficher."
     show:
+    next:
+      title: "Prochain événement"
+    event_item:
       label_title: "Titre"
       label_starts_at: "Lancement"
+      no_event: "Aucun événement futur n'a encore été programmé."

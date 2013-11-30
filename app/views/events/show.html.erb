@@ -1,14 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t '.label_title' %> :</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong><%= t '.label_starts_at' %> :</strong>
-  <%= l @event.starts_at, format: :long %>
-</p>
+<%= render 'event_item' %>
 
 <%= link_to events_path do %>
   <button class="btn btn-primary"><%= t(:back) %></button>

@@ -10,7 +10,7 @@ describe EventsController do
     end
   end
 
-  describe "GET #past_events" do
+  describe "GET past" do
     it "renders only past events" do
       FactoryGirl.create_list(:event, 5)
       correct_number = 2
@@ -25,6 +25,14 @@ describe EventsController do
   describe "GET show" do
     it "assigns the requested event as @event" do
       event = FactoryGirl.create(:event)
+      get :show, {id: event.to_param}
+      assigns(:event).should eq(event)
+    end
+  end
+
+  describe "GET next" do
+    it "assigns the requested event as @event" do
+      event = FactoryGirl.create(:future_event)
       get :show, {id: event.to_param}
       assigns(:event).should eq(event)
     end

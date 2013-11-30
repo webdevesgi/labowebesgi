@@ -10,4 +10,11 @@ class Event < ActiveRecord::Base
     events = self.where("starts_at <= :start_date", {start_date: ago})
     events
   end
+
+  def self.next
+    self.where('starts_at = ?', DateTime.now)
+        .order('starts_at ASC')
+        .limit(1)
+        .first
+  end
 end

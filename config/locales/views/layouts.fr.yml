@@ -4,10 +4,14 @@ fr:
   signup: "S'inscrire"
   login: "Se connecter"
   logout: "Déconnexion"
+  back: "Retour"
+  back_home: "Retour à l'accueil"
+  all_events: "Voir tous les événements"
   layouts:
     header:
       edit_account_link: "Salut <strong>%{name}</strong> !"
       admin: "Administration"
       toggle_navigation: "Basculer la navigation"
       news: "News"
+      next_event: "Prochain événement"
       past_events: "Événements précédents"

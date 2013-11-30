@@ -15,5 +15,12 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
+    raise ActionController::RoutingError.new('Not Found') if @event.nil?
+  end
+
+  # GET /events/next
+  # GET /events/next
+  def next
+    @event = Event.next
   end
 end
