@@ -11,6 +11,7 @@ Labowebesgi::Application.routes.draw do
   resources :users, only: [:show]
   resources :articles, only: [:index, :show]
   resources :events, only: [:index, :show] do
+    get 'next', on: :collection
     get 'past', on: :collection
   end
 end

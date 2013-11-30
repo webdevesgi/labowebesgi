@@ -4,6 +4,7 @@ fr:
       title: "Liste des événements"
     past:
       title: "Événements précédents"
+      all_events: "Voir tous les événements"
     event_list:
       table_title: "Titre"
       table_starts_at: "Lancement"

@@ -1,3 +1,9 @@
 <h1><%= t '.title' %></h1>
 
 <%= render 'event_list' %>
+
+<p>
+  <%= link_to(events_path) do %>
+    <button class="btn btn-info"><%= t('.all_events') %></button>
+  <% end %>
+</p>
