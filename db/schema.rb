@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131128205504) do
+ActiveRecord::Schema.define(version: 20131130222820) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
     t.string   "content"
-    t.string   "user_id"
+    t.integer  "user_id",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -51,6 +51,15 @@ ActiveRecord::Schema.define(version: 20131128205504) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
+
+  create_table "talks", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

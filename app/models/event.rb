@@ -2,6 +2,8 @@ class Event < ActiveRecord::Base
 
   validates :title, presence: true
 
+  has_many :talks, dependent: :nullify, validate: :false
+
   def self.past
     delay = 3.hours
     utc_offset = 1
