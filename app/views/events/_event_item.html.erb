@@ -1,13 +1,28 @@
 <% unless @event.nil? %>
-  <p>
-    <strong><%= t '.label_title' %> :</strong>
-    <%= @event.title %>
-  </p>
 
-  <p>
-    <strong><%= t '.label_starts_at' %> :</strong>
-    <%= l @event.starts_at, format: :long %>
-  </p>
+  <div class="event-description">
+    <h2><%= @event.title %></h2>
+    <p>
+      <%= l(@event.starts_at, format: :long_custom).capitalize %>
+    </p>
+  </div>
+
+  <h2><%= t '.talks' %></h2>
+
+  <% if @event.talks.any? %>
+    <table class="table">
+      <tbody>
+      <% @event.talks.each do |talk| %>
+        <tr>
+          <td><%= talk.title %></td>
+          <td><%= talk.description %></td>
+          <td><%= link_to talk.speaker.name, user_path(talk.speaker) %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  <% end %>
+
 <% else %>
   <p><%= t '.no_event' %></p>
 <% end %>

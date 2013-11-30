@@ -2,8 +2,9 @@
 
 FactoryGirl.define do
   factory :talk do
-    title "MyString"
-    description "MyText"
-    user_id 1
+    title { Faker::Lorem.sentence(10) }
+    description { Faker::Lorem.paragraph(1) }
+    speaker { FactoryGirl.build(:user) }
+    event { FactoryGirl.build(:event) }
   end
 end

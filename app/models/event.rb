@@ -14,7 +14,7 @@ class Event < ActiveRecord::Base
   end
 
   def self.next
-    self.where('starts_at = ?', DateTime.now)
+    self.where('starts_at > ?', DateTime.now)
         .order('starts_at ASC')
         .limit(1)
         .first

@@ -14,6 +14,6 @@ fr:
     next:
       title: "Prochain événement"
     event_item:
-      label_title: "Titre"
       label_starts_at: "Lancement"
+      talks: "Présentations"
       no_event: "Aucun événement futur n'a encore été programmé."

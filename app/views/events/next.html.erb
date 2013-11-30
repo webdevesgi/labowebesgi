@@ -3,10 +3,6 @@
 <%= render 'event_item' %>
 
 <p>
-  <%= link_to(events_path) do %>
-    <button class="btn btn-primary"><%= t :all_events %></button>
-  <% end %>
-  <%= link_to root_path do %>
-    <button class="btn btn-primary"><%= t :back_home %></button>
-  <% end %>
+  <%= link_to t(:all_events), events_path, class: "btn btn-primary" %>
+  <%= link_to t(:back_home), root_path, class: "btn btn-primary" %>
 </p>
