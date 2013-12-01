@@ -7,11 +7,9 @@
     </p>
   </div>
 
-  <h2><%= t '.talks' %></h2>
+  <%= render partial: 'talks/talk_list', locals: {talks: @event.talks, from: :event} %>
 
-  <% if @event.talks.any? %>
-    <%= render partial: 'talks/talk_list', locals: {talks: @event.talks, from: :event} %>
-  <% end %>
+  <%= render 'subscribers_list' %>
 
 <% else %>
   <p><%= t '.no_event' %></p>

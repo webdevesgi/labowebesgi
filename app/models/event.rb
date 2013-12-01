@@ -3,6 +3,8 @@ class Event < ActiveRecord::Base
   validates :title, presence: true
 
   has_many :talks, dependent: :nullify, validate: :false
+  has_many :subscribtions
+  has_many :subscribers, through: :subscribtions
 
   def self.past
     delay = 3.hours
@@ -19,4 +21,5 @@ class Event < ActiveRecord::Base
         .limit(1)
         .first
   end
+
 end

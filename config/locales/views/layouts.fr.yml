@@ -11,6 +11,9 @@ fr:
   back: "Retour"
   back_home: "Retour à l'accueil"
   all_events: "Voir tous les événements"
+  subscribe_event: "S'inscrire à cet événement"
+  has_already_subscribed: "Vous êtes déjà inscrit à cet événement"
+  successfully_subscribed: "Vous êtes maintenant inscrit à l'événement \"%{title}\"."
   layouts:
     header:
       edit_account_link: "Salut <strong>%{name}</strong> !"

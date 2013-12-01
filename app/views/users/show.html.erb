@@ -2,10 +2,4 @@
 
 <p><%= t '.created_at' %> : <%= l @user.created_at, format: :date %></p>
 
-<h2><%= t '.talks' %></h2>
-
-<% if @user.talks.any? %>
-  <%= render partial: 'talks/talk_list', locals: {talks: @user.talks, from: :user} %>
-<% else %>
-  <p><%= t '.no_talks', name: @user.name %></p>
-<% end %>
+<%= render partial: 'talks/talk_list', locals: {talks: @user.talks, from: :user} %>

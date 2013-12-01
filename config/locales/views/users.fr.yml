@@ -2,5 +2,3 @@ fr:
   users:
     show:
       created_at: "Date d'inscription"
-      talks: "Présentations"
-      no_talks: "%{name} n'a pas encore effectué de présentations."

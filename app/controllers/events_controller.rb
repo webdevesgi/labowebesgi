@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+  before_action :set_event,          only: [:show, :subscribe]
+  before_action :authenticate_user!, only: [:subscribe]
+
   # GET /events
   # GET /events.json
   def index
@@ -14,13 +17,24 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
-    @event = Event.find(params[:id])
-    raise ActionController::RoutingError.new('Not Found') if @event.nil?
   end
 
   # GET /events/next
-  # GET /events/next
+  # GET /events/next.json
   def next
     @event = Event.next
   end
+
+  # GET /events/1/subscribe
+  def subscribe
+    @event.subscribers << current_user unless current_user.subscribed_to_event?(@event)
+    redirect_to @event, notice: t(:successfully_subscribed, title: @event.title)
+  end
+
+  private
+
+    def set_event
+      @event = Event.find(params[:id])
+      raise ActionController::RoutingError.new('Not Found') if @event.nil?
+    end
 end

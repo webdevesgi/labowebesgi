@@ -13,7 +13,8 @@ fr:
     show:
     next:
       title: "Prochain événement"
+      to_connect: "vous connecter"
+      must_login: "Vous devez %{link} pour pouvoir vous inscrire à cet événement."
     event_item:
       label_starts_at: "Lancement"
-      talks: "Présentations"
       no_event: "Aucun événement futur n'a encore été programmé."
