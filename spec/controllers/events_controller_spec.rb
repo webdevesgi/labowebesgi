@@ -6,7 +6,7 @@ describe EventsController do
     it "assigns all events as @events" do
       event = FactoryGirl.create(:event)
       get :index
-      assigns(:events).should eq([event])
+      assigns(:events).should eq(Event.all)
     end
   end
 

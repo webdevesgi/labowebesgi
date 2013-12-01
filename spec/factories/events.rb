@@ -13,4 +13,10 @@ FactoryGirl.define do
   factory :future_event, parent: :event do |f|
     f.starts_at 1.day.from_now
   end
+
+  factory :event_with_subscribers, parent: :event do
+    after(:create) do |event|
+      event.subscribers << FactoryGirl.create(:user)
+    end
+  end
 end

@@ -10,6 +10,11 @@ describe User do
     FactoryGirl.create(:user)
   end
 
+  it "should create a new instance with one subscribed event" do
+    user = FactoryGirl.create(:user_with_subscribed_events)
+    user.events_subscribed.should have(1).items
+  end
+
   it "should require an email address" do
     no_email_user = FactoryGirl.build(:user_missing_email)
     no_email_user.should_not be_valid

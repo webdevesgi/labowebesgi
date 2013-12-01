@@ -29,4 +29,10 @@ FactoryGirl.define do
     f.password pwd
     f.password_confirmation pwd
   end
+
+  factory :user_with_subscribed_events, parent: :user do
+    after(:create) do |user|
+      user.events_subscribed << FactoryGirl.create(:event)
+    end
+  end
 end
