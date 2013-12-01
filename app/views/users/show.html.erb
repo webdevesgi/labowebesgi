@@ -1,3 +1,11 @@
-<h3><%= t '.title' %></h3>
-<p><%= t '.name' %> : <%= @user.name %></p>
-<p><%= t '.email' %> : <%= @user.email if @user.email %></p>
+<h1><%= @user.name %></h1>
+
+<p><%= t '.created_at' %> : <%= l @user.created_at, format: :date %></p>
+
+<h2><%= t '.talks' %></h2>
+
+<% if @user.talks.any? %>
+  <%= render partial: 'talks/talk_list', locals: {talks: @user.talks, from: :user} %>
+<% else %>
+  <p><%= t '.no_talks', name: @user.name %></p>
+<% end %>

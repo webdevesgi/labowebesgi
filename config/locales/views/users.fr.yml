@@ -1,6 +1,6 @@
 fr:
   users:
     show:
-      title: "Utilisateur"
-      name: "Nom"
-      email: "Adresse e-mail"
+      created_at: "Date d'inscription"
+      talks: "Présentations"
+      no_talks: "%{name} n'a pas encore effectué de présentations."

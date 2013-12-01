@@ -10,17 +10,7 @@
   <h2><%= t '.talks' %></h2>
 
   <% if @event.talks.any? %>
-    <table class="table">
-      <tbody>
-      <% @event.talks.each do |talk| %>
-        <tr>
-          <td><%= talk.title %></td>
-          <td><%= talk.description %></td>
-          <td><%= link_to talk.speaker.name, user_path(talk.speaker) %></td>
-        </tr>
-      <% end %>
-      </tbody>
-    </table>
+    <%= render partial: 'talks/talk_list', locals: {talks: @event.talks, from: :event} %>
   <% end %>
 
 <% else %>

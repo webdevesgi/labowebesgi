@@ -2,6 +2,7 @@ fr:
   time:
     formats:
       long_custom: "%A %d %B à %H:%M"
+      date: "%e %B %Y"
   hello: "Salut tout le monde"
   app_name: "Labo Web ESGI"
   signup: "S'inscrire"

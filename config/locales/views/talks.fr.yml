@@ -1,0 +1,7 @@
+fr:
+  talks:
+    talk_list:
+      table_title: "Titre"
+      table_description: "Description"
+      table_speaker: "Présenté par"
+      table_starts_at: "Date"
