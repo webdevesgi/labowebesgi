@@ -2,8 +2,9 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {:class => 'form-vertical' }) do |f| %>
   <%= f.error_notification %>
   <%= display_base_errors resource %>
-  <%= f.input :name, label: t(:email), autofocus: true %>
-  <%= f.input :email, required: true %>
+  <%= f.input :firstname, label: t(:firstname), required: true, autofocus: true %>
+  <%= f.input :lastname, label: t(:lastname), required: true %>
+  <%= f.input :email, label: t(:email), required: true %>
   <%= f.input :password, label: t(:password), required: true %>
   <%= f.input :password_confirmation, label: t(:password_confirmation), required: true %>
   <%= f.button :submit, t(:signup), class: 'btn-primary' %>

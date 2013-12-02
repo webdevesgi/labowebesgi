@@ -10,6 +10,11 @@ describe User do
     FactoryGirl.create(:user)
   end
 
+  it "should respond to its full name" do
+    user = FactoryGirl.build(:user)
+    user.full_name.should eq("#{user.firstname} #{user.lastname}")
+  end
+
   it "should create a new instance with one subscribed event" do
     user = FactoryGirl.create(:user_with_subscribed_events)
     user.events_subscribed.should have(1).items

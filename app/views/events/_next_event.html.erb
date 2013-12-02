@@ -1,0 +1,13 @@
+<h2>Prochain événement</h2>
+<% unless next_event.nil? %>
+  <h3><%= next_event.title %></h3>
+  <p>
+    <%= l(next_event.starts_at, format: :long_custom).capitalize %>
+  </p>
+  <p>
+    <%= t '.next_event_subscribers', count: next_event.subscribers.size %>
+  </p>
+  <%= render partial: 'events/subscribtion_button', locals: {event: next_event} %>
+<% else %>
+  <p><%= t '.no_event' %></p>
+<% end %>

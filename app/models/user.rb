@@ -16,4 +16,8 @@ class User < ActiveRecord::Base
   def subscribed_to_event?(event)
     self.events_subscribed.include?(event)
   end
+
+  def full_name
+    "#{self.firstname} #{self.lastname}"
+  end
 end

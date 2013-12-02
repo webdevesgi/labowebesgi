@@ -16,7 +16,7 @@
         <tr>
           <td><%= article.title %></td>
           <td><%= article.content %></td>
-          <td><%= link_to article.user.name, user_path(article.user) %></td>
+          <td><%= link_to article.user.full_name, user_path(article.user) %></td>
           <td>
             <%= link_to(article) do %>
               <button class="btn btn-info"><%= t('.table_show') %></button>

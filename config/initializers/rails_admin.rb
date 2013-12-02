@@ -100,6 +100,12 @@ RailsAdmin.config do |config|
   # end
 
 
+  config.model 'User' do
+    object_label_method do
+      :full_name
+    end
+  end
+
   ###  User  ###
 
   # config.model 'User' do

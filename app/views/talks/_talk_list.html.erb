@@ -22,7 +22,7 @@
           <td><%= link_to talk.event.title, event_path(talk.event) %></td>
           <td><%= l talk.event.starts_at, format: :date %></td>
         <% else %>
-          <td><%= link_to talk.speaker.name, user_path(talk.speaker) %></td>
+          <td><%= link_to talk.speaker.full_name, user_path(talk.speaker) %></td>
         <% end %>
       </tr>
     <% end %>

@@ -3,7 +3,8 @@
 FactoryGirl.define do
   factory :user do
     pwd = Faker::Lorem.characters(10)
-    name { Faker::Name.name }
+    firstname { Faker::Name.first_name }
+    lastname { Faker::Name.last_name }
     email { Faker::Internet.email }
     password pwd
     password_confirmation pwd

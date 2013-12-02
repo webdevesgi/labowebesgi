@@ -6,7 +6,7 @@
 <ul class="nav navbar-nav navbar-right">
   <% if user_signed_in? %>
     <li>
-      <%= link_to t('layouts.header.edit_account_link', name: current_user.name).html_safe, edit_user_registration_path %>
+      <%= link_to t('layouts.header.edit_account_link', name: "#{current_user.firstname}").html_safe, edit_user_registration_path %>
     </li>
   <% else %>
     <li><%= link_to t(:signup), new_user_registration_path %></li>
