@@ -13,7 +13,6 @@ gem 'devise'
 gem 'figaro'
 gem 'rolify'
 gem 'simple_form'
-gem 'therubyracer', platform: :ruby
 gem 'unicorn'
 gem 'rails_admin', git: 'git://github.com/sferik/rails_admin.git'
 
