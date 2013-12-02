@@ -13,8 +13,6 @@ fr:
     show:
     next:
       title: "Prochain événement"
-      to_connect: "vous connecter"
-      must_login: "Vous devez %{link} pour pouvoir vous inscrire à cet événement."
     event_item:
       label_starts_at: "Lancement"
       no_event: "Aucun événement futur n'a encore été programmé."
@@ -24,3 +22,6 @@ fr:
         zero: "Aucune personne inscrite pour le moment."
         one: "Déjà 1 personne inscrite."
         other: "Déjà %{count} personnes inscrites."
+    subscribtion_button:
+      must_login: "Vous devez %{link} pour pouvoir vous inscrire à cet événement."
+      to_connect: "vous connecter"
