@@ -1,9 +1,37 @@
-<h2><%= t '.title' %></h2>
-<% if @articles.any? %>
-  <% @articles.each do |article| %>
-    <h2><%=link_to article.title, article %></h2>
-    <div class="article-content"><%= article.content %></div>
-  <% end %>
-<% else %>
-  <p><%= t '.no_articles' %></p>
-<% end %>
+<h1>Labo Web ESGI</h1>
+
+<div class="row">
+
+  <div class="col-md-6">
+    <h2><%= t '.title' %></h2>
+    <% if @articles.any? %>
+      <% @articles.each do |article| %>
+        <h3><%= article.title %></h3>
+        <p>
+          <em>
+            Par <%= link_to article.user.name, user_path(article.user) %>
+            le <%= l article.created_at, format: :short %>
+          </em>
+        </p>
+        <div class="article-content"><%= article.content %></div>
+        <hr>
+      <% end %>
+    <% else %>
+      <p><%= t '.no_articles' %></p>
+    <% end %>
+    <%= render partial: 'articles/list_button', locals: {articles: @articles} %>
+  </div>
+
+  <div class="col-md-6">
+    <h2>Prochain événement</h2>
+    <h3><%= @next_event.title %></h3>
+    <p>
+      <%= l(@next_event.starts_at, format: :long_custom).capitalize %>
+    </p>
+    <p>
+      <%= t '.next_event_subscribers', count: @next_event.subscribers.size %>
+    </p>
+    <%= render partial: 'events/subscribtion_button', locals: {event: @next_event} %>
+  </div>
+
+</div>

@@ -3,3 +3,7 @@ fr:
     index:
       title: "Dernières actualités"
       no_articles: "Il n'y a pas de news à afficher."
+      next_event_subscribers:
+        zero: "Aucune personne inscrite pour le moment."
+        one: "Déjà 1 personne inscrite."
+        other: "Déjà %{count} personnes inscrites."

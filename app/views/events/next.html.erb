@@ -2,7 +2,7 @@
 
 <%= render 'event_item' %>
 
-<%= render 'subscribtion_button' %>
+<%= render partial: 'subscribtion_button', locals: {event: @event} %>
 
 <p>
   <%= link_to t(:all_events), events_path, class: "btn btn-primary" %>

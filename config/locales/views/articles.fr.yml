@@ -12,3 +12,5 @@ fr:
       label_title: "Titre"
       label_content: "Contenu"
       label_user: "Auteur"
+    list_button:
+      all_articles: "Voir toutes les news"
