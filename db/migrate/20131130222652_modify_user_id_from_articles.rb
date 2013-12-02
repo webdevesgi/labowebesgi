@@ -1,7 +1,5 @@
 class ModifyUserIdFromArticles < ActiveRecord::Migration
   def change
-    change_table :articles do |t|
-      t.change :user_id, :integer
-    end
+    change_column :articles, :user_id, 'integer USING CAST(column_to_change AS integer)'
   end
 end
