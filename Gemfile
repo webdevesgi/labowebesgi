@@ -14,7 +14,9 @@ gem 'figaro'
 gem 'rolify'
 gem 'simple_form'
 gem 'unicorn'
+gem 'rack-timeout'
 gem 'rails_admin', git: 'git://github.com/sferik/rails_admin.git'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'pg'
