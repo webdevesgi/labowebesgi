@@ -1,19 +1,49 @@
-Labowebesgi
+Labo Web ESGI
 ========================
 
-This application was generated with the rails_apps_composer gem:
-https://github.com/RailsApps/rails_apps_composer
-provided by the RailsApps Project:
-http://railsapps.github.io/
+This is the repository of the [Labo Web ESGI association's website](http://labowebesgi.herokuapp.com).
 
-________________________
+# Requirements
 
-Recipes:
-["apps4", "controllers", "core", "email", "extras", "frontend", "gems", "git", "init", "models", "prelaunch", "railsapps", "readme", "routes", "saas", "setup", "testing", "views"]
+**[[+](http://git-scm.com)** Git
 
-Preferences:
-{:git=>true, :apps4=>"none", :dev_webserver=>"unicorn", :prod_webserver=>"unicorn", :database=>"sqlite", :templates=>"erb", :unit_test=>"rspec", :integration=>"rspec-capybara", :continuous_testing=>"none", :fixtures=>"factory_girl", :frontend=>"bootstrap3", :email=>"gmail", :authentication=>"devise", :devise_modules=>"default", :authorization=>"cancan", :form_builder=>"simple_form", :starter_app=>"users_app", :rvmrc=>false, :quiet_assets=>true, :local_env_file=>true, :better_errors=>true, :ban_spiders=>true, :jsruntime=>true}
+**[[+](https://rvm.io)]** Ruby 2, installed with [RVM]((https://rvm.io)) or [rbevn](http://rbenv.org)
 
-________________________
+**[[+](http://bundler.io)]** Bundler: `gem install bundler`
 
-License
+**[[+](http://rubyonrails.org)]** Rails 4 requirements: check on the Internet what does your OS need to install Ruby On Rails properly.
+
+If you're using rbenv, don't forget to run `rbenv rehash` after installing gems.
+
+# Installation
+
+    git clone git@github.com:webdevesgi/labowebesgi.git && cd labowebesgi
+    bundle install --without production
+
+You'll need to create a `config/application.yml` file with all environment variables needed for the application. Check the [example file](https://github.com/webdevesgi/labowebesgi/blob/master/config/application.example.yml) out to fill it.
+
+Then create your development and test databases with the folowing code:
+
+    rake db:create
+    rake db:migrate
+    rake db:seed
+
+# Launch
+
+    rails s
+
+# Test
+
+    rspec spec
+
+# Contribute
+
+- [Fork](https://help.github.com/articles/fork-a-repo) it
+- [Write your code](https://help.github.com/articles/making-changes) on your own repository
+- Submit a [pull-request](https://help.github.com/articles/using-pull-requests)
+
+
+# Contributors
+
+- Rémy Hannequin ([@rhannequin](https://github.com/rhannequin))
+
