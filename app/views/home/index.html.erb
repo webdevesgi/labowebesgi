@@ -1,0 +1,29 @@
+<h1>Labo Web ESGI</h1>
+
+<div class="row">
+
+  <div class="col-md-6">
+    <h2><%= t '.title' %></h2>
+    <% if @articles.any? %>
+      <% @articles.each do |article| %>
+        <h3><%= article.title %></h3>
+        <p>
+          <em>
+            Par <%= link_to article.user.full_name, user_path(article.user) %>
+            le <%= l article.created_at, format: :short %>
+          </em>
+        </p>
+        <div class="article-content"><%= article.content %></div>
+        <hr>
+      <% end %>
+    <% else %>
+      <p><%= t '.no_articles' %></p>
+    <% end %>
+    <%= render partial: 'articles/list_button', locals: {articles: @articles} %>
+  </div>
+
+  <div class="col-md-6">
+    <%= render partial: 'events/next_event', locals: {next_event: @next_event} %>
+  </div>
+
+</div>

@@ -1,0 +1,24 @@
+fr:
+  time:
+    formats:
+      long_custom: "%A %d %B à %H:%M"
+      date: "%e %B %Y"
+  hello: "Salut tout le monde"
+  app_name: "Labo Web ESGI"
+  signup: "S'inscrire"
+  login: "Se connecter"
+  logout: "Déconnexion"
+  back: "Retour"
+  back_home: "Retour à l'accueil"
+  all_events: "Voir tous les événements"
+  subscribe_event: "S'inscrire à cet événement"
+  has_already_subscribed: "Vous êtes déjà inscrit(e) à cet événement"
+  successfully_subscribed: "Vous êtes maintenant inscrit à l'événement \"%{title}\"."
+  layouts:
+    header:
+      edit_account_link: "Salut <strong>%{name}</strong> !"
+      admin: "Administration"
+      toggle_navigation: "Basculer la navigation"
+      news: "News"
+      next_event: "Prochain événement"
+      past_events: "Événements précédents"

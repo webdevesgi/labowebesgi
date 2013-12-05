@@ -1,0 +1,31 @@
+<% if @events.any? %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= t '.table_title' %></th>
+        <th><%= t '.table_starts_at' %></th>
+        <th><%= t '.table_actions' %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.title %></td>
+          <td><%= l event.starts_at, format: :short %></td>
+          <td>
+            <%= link_to(event) do %>
+              <button class="btn btn-info"><%= t('.table_show') %></button>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% else %>
+
+  <p><%= t '.no_events' %></p>
+
+<% end %>

@@ -1,0 +1,10 @@
+<h1><%= t '.title' %></h1>
+
+<%= render 'event_item' %>
+
+<%= render partial: 'subscribtion_button', locals: {event: @event} %>
+
+<p>
+  <%= link_to t(:all_events), events_path, class: "btn btn-primary" %>
+  <%= link_to t(:back_home), root_path, class: "btn btn-primary" %>
+</p>

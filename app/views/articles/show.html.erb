@@ -1,0 +1,16 @@
+<p>
+  <strong><%= t '.label_title' %> :</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong><%= t '.label_content' %> :</strong>
+  <%= @article.content %>
+</p>
+
+<p>
+  <strong><%= t '.label_user' %> :</strong>
+  <%= link_to @article.user.full_name, user_path(@article.user) %>
+</p>
+
+<%= link_to t(:back), articles_path %>

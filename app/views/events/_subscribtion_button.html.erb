@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+  <p>
+    <% if !current_user.subscribed_to_event?(event) %>
+      <%= link_to t(:subscribe_event), subscribe_event_path(event), class: "btn btn-success" %>
+    <% else %>
+      <button class="btn btn-success disabled"><%= t :has_already_subscribed %></button>
+    <% end %>
+  </p>
+<% else %>
+  <p>
+    <%= t('.must_login', link: link_to(t('.to_connect'), new_user_session_path)).html_safe %>
+  </p>
+<% end %>

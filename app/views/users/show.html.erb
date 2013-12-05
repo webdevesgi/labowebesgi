@@ -1,0 +1,5 @@
+<h1><%= @user.full_name %></h1>
+
+<p><%= t '.created_at' %> : <%= l @user.created_at, format: :date %></p>
+
+<%= render partial: 'talks/talk_list', locals: {talks: @user.talks, from: :user} %>

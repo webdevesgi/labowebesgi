@@ -1,0 +1,16 @@
+<% unless @event.nil? %>
+
+  <div class="event-description">
+    <h2><%= @event.title %></h2>
+    <p>
+      <%= l(@event.starts_at, format: :long_custom).capitalize %>
+    </p>
+  </div>
+
+  <%= render partial: 'talks/talk_list', locals: {talks: @event.talks, from: :event} %>
+
+  <%= render 'subscribers_list' %>
+
+<% else %>
+  <p><%= t '.no_event' %></p>
+<% end %>
