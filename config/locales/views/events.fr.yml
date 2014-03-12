@@ -17,6 +17,7 @@ fr:
       label_starts_at: "Lancement"
       no_event: "Aucun événement futur n'a encore été programmé."
     next_event:
+      speakers: "Intervenants"
       no_event: "Il n'y a pas d'événement à afficher."
       next_event_subscribers:
         zero: "Aucune personne inscrite pour le moment."

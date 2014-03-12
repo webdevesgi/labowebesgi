@@ -1,6 +1,12 @@
 <h2>Prochain événement</h2>
 <% unless next_event.nil? %>
-  <h3><%= next_event.title %></h3>
+  <h3><%= link_to next_event.title, next_event %></h3>
+  <h4>
+    <%= t '.speakers' %> : <%= next_event.talks
+                            .map { |t| link_to "#{t.speaker.firstname} #{t.speaker.lastname}", t.speaker }
+                            .join(', ')
+                            .html_safe %>
+  </h4>
   <p>
     <%= l(next_event.starts_at, format: :long_custom).capitalize %>
   </p>
