@@ -13,7 +13,7 @@
             le <%= l article.created_at, format: :short %>
           </em>
         </p>
-        <div class="article-content"><%= article.content %></div>
+        <div class="article-content"><%= article.content.html_safe %></div>
         <hr>
       <% end %>
     <% else %>
