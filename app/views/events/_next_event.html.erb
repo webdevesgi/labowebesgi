@@ -13,7 +13,7 @@
   <p>
     <%= t '.next_event_subscribers', count: next_event.subscribers.size %>
   </p>
-  <%= render partial: 'events/subscribtion_button', locals: {event: next_event} %>
+  <%= render partial: 'events/subscribtion_button', locals: { event: next_event } %>
 <% else %>
   <p><%= t '.no_event' %></p>
 <% end %>
