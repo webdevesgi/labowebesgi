@@ -5,13 +5,13 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all.order('starts_at DESC')
   end
 
   # GET /events/past
   # GET /events/past.json
   def past
-    @events = Event.past
+    @events = Event.past.order('starts_at DESC')
   end
 
   # GET /events/1

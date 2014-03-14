@@ -11,12 +11,13 @@ class Event < ActiveRecord::Base
     utc_offset = 1
     zone = ActiveSupport::TimeZone[utc_offset].name
     ago = delay.ago.in_time_zone(zone)
-    events = self.where("starts_at <= :start_date", {start_date: ago})
+    events = self.where('starts_at <= :start_date', { start_date: ago })
     events
   end
 
   def self.next
-    self.where('starts_at > ?', DateTime.now)
+    self.includes(subscribers: [], talks: [:speaker])
+        .where('starts_at > ?', DateTime.now)
         .order('starts_at ASC')
         .limit(1)
         .first
