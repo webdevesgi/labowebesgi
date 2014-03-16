@@ -99,4 +99,40 @@ describe User do
 
   end
 
+  describe "optional attributes" do
+
+    context "website" do
+
+      it "is valid with valid website" do
+        FactoryGirl.build(:user, website: Faker::Internet.url).should be_valid
+      end
+
+      it "is valid without website" do
+        FactoryGirl.build(:user, website: nil).should be_valid
+      end
+
+      it "is invalid with valid inwebsite" do
+        FactoryGirl.build(:user, website: 'not_invalid').should_not be_valid
+      end
+
+    end
+
+    context "blog" do
+
+      it "is valid with valid blog" do
+        FactoryGirl.build(:user, blog: Faker::Internet.url).should be_valid
+      end
+
+      it "is valid without blog" do
+        FactoryGirl.build(:user, blog: nil).should be_valid
+      end
+
+      it "is invalid with valid inwebsite" do
+        FactoryGirl.build(:user, blog: 'not_invalid').should_not be_valid
+      end
+
+    end
+
+  end
+
 end

@@ -1,5 +1,7 @@
 <% unless @event.nil? %>
 
+  <% content_for(:title) { @event.title } %>
+
   <div class="event-description">
     <h2><%= @event.title %></h2>
     <p>
