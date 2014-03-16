@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  validates :website, url: true
+  validates :blog, url: true
+
   has_many :articles, dependent: :nullify, validate: :false
   has_many :talks, dependent: :nullify, validate: :false
   has_many :subscribtions

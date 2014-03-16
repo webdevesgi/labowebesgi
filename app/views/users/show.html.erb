@@ -2,4 +2,12 @@
 
 <p><%= t '.created_at' %> : <%= l @user.created_at, format: :date %></p>
 
+<% unless @user.website.nil? || @user.website.empty? %>
+<p><%= t 'website' %> : <%= link_to @user.website, @user.website %></p>
+<% end %>
+
+<% unless @user.blog.nil? || @user.blog.empty? %>
+<p><%= t 'blog' %> : <%= link_to @user.blog, @user.blog %></p>
+<% end %>
+
 <%= render partial: 'talks/talk_list', locals: {talks: @user.talks, from: :user} %>
