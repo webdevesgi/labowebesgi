@@ -3,10 +3,10 @@ require 'spec_helper'
 describe EventsController do
 
   describe "GET index" do
-    it "assigns all events as @events" do
+    it "assigns all events as @events ordered by starts_at DESC" do
       event = FactoryGirl.create(:event)
       get :index
-      assigns(:events).should eq(Event.all)
+      assigns(:events).should eq(Event.all.order('starts_at DESC'))
     end
   end
 
