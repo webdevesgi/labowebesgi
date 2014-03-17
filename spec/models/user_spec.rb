@@ -99,6 +99,16 @@ describe User do
 
   end
 
+  describe "articles" do
+
+    it "retrieves its articles" do
+      author = FactoryGirl.create(:user)
+      articles = FactoryGirl.create_list(:article, 2, { user: author })
+      author.articles.should eq(articles)
+    end
+
+  end
+
   describe "optional attributes" do
 
     context "website" do
