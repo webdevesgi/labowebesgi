@@ -135,4 +135,35 @@ describe User do
 
   end
 
+  describe "articles" do
+
+    it "retrieves its articles" do
+      author = FactoryGirl.create(:user)
+      articles = FactoryGirl.create_list(:article, 2, { user: author })
+      author.articles.should eq(articles)
+    end
+
+  end
+
+  describe "talks" do
+
+    it "retrieves its talks" do
+      speaker = FactoryGirl.create(:user)
+      talks = FactoryGirl.create_list(:talk, 2, { speaker: speaker })
+      speaker.talks.should eq(talks)
+    end
+
+  end
+
+  describe "events" do
+
+    it "retrieves its subscribed events" do
+      user = FactoryGirl.create(:user)
+      events = FactoryGirl.create_list(:event, 2)
+      events.each { |event| event.subscribers << user }
+      user.events_subscribed.should eq(events)
+    end
+
+  end
+
 end
