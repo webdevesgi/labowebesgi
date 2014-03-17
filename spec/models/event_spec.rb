@@ -27,4 +27,26 @@ describe Event do
     end
   end
 
+  describe "Talks" do
+
+    it "retreives its talks" do
+      event = FactoryGirl.create :event
+      talks = FactoryGirl.create_list :talk, 5
+      event.talks << talks
+      event.talks.should eq(talks)
+    end
+
+  end
+
+  describe "Subscribers" do
+
+    it "retreives its subscribers" do
+      event = FactoryGirl.create :event
+      subscribers = FactoryGirl.create_list :user, 5
+      event.subscribers << subscribers
+      event.subscribers.should eq(subscribers)
+    end
+
+  end
+
 end
